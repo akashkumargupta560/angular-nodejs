@@ -1,0 +1,161 @@
+<header>
+  <div class="header-page">
+    <div class="logo">
+      <img
+        src="assets/logo/7660083.png"
+        alt="vendorStore"
+        width="49"
+        height="40"
+      />
+    </div>
+    <div class="tabs">
+      <ul>
+        <li>
+          <a href="" roterLinkActive="active">Home</a>
+        </li>
+        <li>
+          <a href="">Gallery</a>
+        </li>
+        <li>
+          <a href="">About</a>
+        </li>
+        <li>
+          <a href="">Profile</a>
+        </li>
+      </ul>
+    </div>
+    <div class="auth">
+      <ul>
+        <li>
+          <a
+            href=""
+            class="login"
+            style="color: green"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModalLogin"
+            >Login</a
+          >
+        </li>
+        <li>
+          <a href="" class="singup" style="color: blue" data-bs-toggle="modal"
+          data-bs-target="#exampleModalSing">Singup</a>
+        </li>
+        <li>
+          <a href="" class="logout" style="color: red">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+<!-- The Modal -->
+<!-- <div id="myModal" class="modal">
+id="myBtn"
+    Modal content
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Some text in the Modal..</p>
+      <p>Some text in the Modal..</p>
+      <p>Some text in the Modal..</p>
+    </div>
+</div> -->
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="exampleModalLogin"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Login Here</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form>
+            <div class="mb-3">
+              <label class="form-label">Email Address</label>
+              <input type="email" class="form-control" >
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Password</label>
+              <input type="password" class="form-control">
+            </div>
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+        <button type="button" class="btn btn-primary">Login</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div
+  class="modal fade"
+  id="exampleModalSing"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Registration Form</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control" >
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label class="form-label">UserName</label>
+                        <input type="text" class="form-control" >
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Email Address</label>
+                <input type="email" class="form-control" >
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Password</label>
+              <input type="password" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Website</label>
+                <input type="text" class="form-control" >
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Phone</label>
+                <input type="number" class="form-control" >
+            </div>
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
