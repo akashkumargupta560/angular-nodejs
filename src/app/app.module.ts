@@ -5,13 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './core/navbar/navbar.component';
 import { FooterComponent } from './core/footer/footer.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { HomeComponent } from './pages/home/home.component';
-import { AboutComponent } from './pages/about/about.component';
-import { ProfileComponent } from './pages/profile/profile.component';
-import { GalleryComponent } from './pages/gallery/gallery.component';
 import { DashboardModule } from './pages/dashboard/dashboard.module';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +19,9 @@ import { DashboardModule } from './pages/dashboard/dashboard.module';
     BrowserModule,
     AppRoutingModule,
     DashboardModule,
-    
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

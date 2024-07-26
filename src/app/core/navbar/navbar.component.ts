@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'web-navbar',
@@ -6,25 +8,32 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
-  modal:any;
-  btn:any;
-  span:any;
- constructor(){}
+ 
+  userForm!:FormGroup;
+  value:any;
+ constructor( private fb:FormBuilder,private authSrv: AuthService){}
  ngOnInit():void{
-    this.modal = document.getElementById("myModal");
-    this.btn = document.getElementById("myBtn");
-    this.span = document.getElementsByClassName("close")[0];
-    this.btn.onclick = () => {
-      this.modal.style.display = "block";
-    }
-    this.span.onclick = () =>{
-      this.modal.style.display = "none";
-    }
-    window.onclick = (event) => {
-      if (event.target == this.modal) {
-        this.modal.style.display = "none";
-      }
-    }
+   
+    this.formDetails();
  }
+ formDetails(){
+  this.userForm = this.fb.group({
+    name:new FormControl('',[Validators.required]),
+    username:new FormControl('',[Validators.required]),
+    email:new FormControl('',[Validators.required,Validators.email]),
+    phone:new FormControl('',[Validators.required]),
+    website:new FormControl('',[Validators.required]),
+    password:new FormControl('',[Validators.required,Validators.minLength(6)]),
+  })
+ }
+ registration(data:any){
+  //alert("fgf")
+  console.log('post-data',data)
+  //return
+  this.authSrv.fetchRegisterApp(data).subscribe((response:any) =>{
+    response;
+  })
+ }
+
  
 }
