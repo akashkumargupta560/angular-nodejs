@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/services/auth.service';
-
+declare var bootstrap: any; // Declare Bootstrap variable
 @Component({
   selector: 'web-navbar',
   templateUrl: './navbar.component.html',
@@ -27,13 +27,23 @@ export class NavbarComponent {
   })
  }
  registration(data:any){
-  //alert("fgf")
-  console.log('post-data',data)
-  //return
-  this.authSrv.fetchRegisterApp(data).subscribe((response:any) =>{
-    response;
-  })
+   if(this.userForm.valid){
+     this.authSrv.fetchRegisterApp(data).subscribe((response:any) =>{
+       response;
+       this.userForm.reset();
+       this.closeModal();
+     })
+   }
  }
+ closeModal() {
+  const modalElement = document.getElementById('exampleModalSing');
+  if (modalElement) {
+    const modal = bootstrap.Modal.getInstance(modalElement);
+    if (modal) {
+      modal.hide();
+    }
+  }
+}
 
  
 }

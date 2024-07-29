@@ -11,7 +11,7 @@
     <div class="tabs">
       <ul>
         <li>
-          <a href="" roterLinkActive="active">Home</a>
+          <a routerLink="home" roterLinkActive="active">Home</a>
         </li>
         <li>
           <a href="">Gallery</a>
@@ -20,7 +20,7 @@
           <a href="">About</a>
         </li>
         <li>
-          <a href="">Profile</a>
+          <a routerLink="/profile">Profile</a>
         </li>
       </ul>
     </div>
@@ -38,7 +38,7 @@
         </li>
         <li>
           <a href="" class="singup" style="color: blue" data-bs-toggle="modal"
-          data-bs-target="#exampleModalSing">Singup</a>
+          data-bs-target="#exampleModalSing">SignUp</a>
         </li>
         <li>
           <a href="" class="logout" style="color: red">Logout</a>
@@ -47,18 +47,8 @@
     </div>
   </div>
 </header>
-<!-- The Modal -->
-<!-- <div id="myModal" class="modal">
-id="myBtn"
-    Modal content
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <p>Some text in the Modal..</p>
-      <p>Some text in the Modal..</p>
-      <p>Some text in the Modal..</p>
-    </div>
-</div> -->
-<!-- Modal -->
+
+<!--Login Modal -->
 <div
   class="modal fade"
   id="exampleModalLogin"
@@ -98,6 +88,7 @@ id="myBtn"
     </div>
   </div>
 </div>
+<!--Registration Modal -->
 <div
   class="modal fade"
   id="exampleModalSing"

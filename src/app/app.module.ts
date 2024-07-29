@@ -8,6 +8,9 @@ import { FooterComponent } from './core/footer/footer.component';
 import { DashboardModule } from './pages/dashboard/dashboard.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ProfileModule } from './pages/profile/profile.module';
+import { NO_ERRORS_SCHEMA } from '@angular/compiler';
+import { CommonModule } from '@angular/common';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,14 +19,17 @@ import { HttpClientModule } from '@angular/common/http';
     
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     DashboardModule,
+    ProfileModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  // schemas: [NO_ERRORS_SCHEMA]
 })
 export class AppModule { }

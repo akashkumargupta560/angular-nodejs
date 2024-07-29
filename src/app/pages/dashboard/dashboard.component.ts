@@ -7,16 +7,16 @@ import { UsersService } from 'src/app/services/users.service';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent {
-  allUsers:any;
- constructor(private userSrv:UsersService){}
- ngOnInit(){
-  this.getAllUserDetails();
- }
+//   allUsers:any;
+//  constructor(private userSrv:UsersService){}
+//  ngOnInit(){
+//   this.getAllUserDetails();
+//  }
 
- getAllUserDetails(){
-  this.userSrv.fetchAllGetApp().subscribe((resp:any) =>{
-    this.allUsers =resp;
-    //console.log("get-all-users",this.allUsers)
-  })
- }
+//  getAllUserDetails(){
+//   this.userSrv.fetchAllGetApp().subscribe((resp:any) =>{
+//     this.allUsers =resp;
+//     //console.log("get-all-users",this.allUsers)
+//   })
+//  }
 }
