@@ -30,3 +30,13 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+// app-routing.module.ts
+// const routes: Routes = [
+//   { path: 'admin', loadChildren: () => import('./features/admin/admin.module').then(m => m.AdminModule), canActivate: [AuthGuard], data: { expectedRole: 'admin' } },
+//   { path: 'user', loadChildren: () => import('./features/user/user.module').then(m => m.UserModule), canActivate: [AuthGuard], data: { expectedRole: 'user' } },
+//   { path: 'seller', loadChildren: () => import('./features/seller/seller.module').then(m => m.SellerModule), canActivate: [AuthGuard], data: { expectedRole: 'seller' } },
+//   { path: '', redirectTo: '/home', pathMatch: 'full' },
+//   { path: '**', component: NotFoundComponent }
+// ];
+
+////Use For Later

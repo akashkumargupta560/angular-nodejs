@@ -113,7 +113,14 @@
                 <div class="col-md-6">
                     <div class="mb-3">
                         <label class="form-label">Full Name</label>
-                        <input type="text" class="form-control" formControlName="name">
+                        <input type="text" class="form-control" formControlName="name" >
+                      <!-- <div *ngIf="userForm.get('name')?.invalid && userForm.get('name')?.touched">
+                        <small *ngIf="userForm.get('name')?.errors?.['required']">Name is required.</small>
+                      </div> -->
+                      <div class="alert alert-danger" *ngIf="controls['name'].invalid && controls['name'].touched" style="margin-top:10px">
+                        <small *ngIf="controls['name'].errors?.['required']">Name is required.</small>
+                        <small *ngIf="controls['name'].errors?.['minlength']">Name must be at least 3 characters long.</small>
+                      </div>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -135,10 +142,21 @@
                 <label class="form-label">Website</label>
                 <input type="text" class="form-control" formControlName="website">
             </div>
-            <div class="mb-3">
-                <label class="form-label">Phone</label>
-                <input type="number" class="form-control" formControlName="phone">
-            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <label class="form-label">Phone</label>
+                  <input type="number" class="form-control" formControlName="phone">
+              </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="mb-3">
+                      <label class="form-label">Role</label>
+                      <input type="text" class="form-control" formControlName="role">
+                  </div>
+              </div>
+          </div>
+           
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
                 Close

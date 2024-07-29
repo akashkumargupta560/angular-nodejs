@@ -23,6 +23,7 @@ export class NavbarComponent {
     email:new FormControl('',[Validators.required,Validators.email]),
     phone:new FormControl('',[Validators.required]),
     website:new FormControl('',[Validators.required]),
+    role:new FormControl('',[Validators.required]),
     password:new FormControl('',[Validators.required,Validators.minLength(6)]),
   })
  }
@@ -34,7 +35,14 @@ export class NavbarComponent {
        this.closeModal();
      })
    }
+
  }
+//  get nameControl(): FormControl {
+//   return this.userForm.get('name') as FormControl;
+// }
+get controls() {
+  return this.userForm.controls;
+}
  closeModal() {
   const modalElement = document.getElementById('exampleModalSing');
   if (modalElement) {
@@ -45,5 +53,4 @@ export class NavbarComponent {
   }
 }
 
- 
 }
