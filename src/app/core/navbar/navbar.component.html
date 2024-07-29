@@ -119,7 +119,6 @@
                       </div> -->
                       <div class="alert alert-danger" *ngIf="controls['name'].invalid && controls['name'].touched" style="margin-top:10px">
                         <small *ngIf="controls['name'].errors?.['required']">Name is required.</small>
-                        <small *ngIf="controls['name'].errors?.['minlength']">Name must be at least 3 characters long.</small>
                       </div>
                     </div>
                 </div>
@@ -127,32 +126,58 @@
                     <div class="mb-3">
                         <label class="form-label">UserName</label>
                         <input type="text" class="form-control" formControlName="username">
+                        <div class="alert alert-danger" *ngIf="controls['username'].invalid && controls['username'].touched" style="margin-top:10px">
+                          <small *ngIf="controls['username'].errors?.['required']">UserName is required.</small>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="mb-3">
                 <label class="form-label">Email Address</label>
                 <input type="email" class="form-control" formControlName="email">
+                <div class="alert alert-danger" *ngIf="controls['email'].invalid && controls['email'].touched" style="margin-top:10px">
+                  <small *ngIf="controls['email'].errors?.['required']">Email is required.</small>
+                  <small *ngIf="controls['email'].errors?.['pattern']">Enter a valid email address!</small>
+                </div>
             </div>
             <div class="mb-3">
               <label class="form-label">Password</label>
               <input type="password" class="form-control" formControlName="password">
+              <div class="alert alert-danger" *ngIf="controls['password'].invalid && controls['password'].touched" style="margin-top:10px">
+                <small *ngIf="controls['password'].errors?.['required']">Password is required.</small>
+                <small *ngIf="controls['password'].errors?.['minLength']">Password must be at least 8 characters.</small>
+                <!-- <small *ngIf="controls['password'].errors?.['maxLength']">Password is required.</small> -->
+                <small *ngIf="controls['password'].errors?.['pattern']">Password must contain at least one lowercase letter.</small>
+                <small *ngIf="controls['password'].errors?.['pattern']">Password must contain at least one uppercase letter.</small>
+                <small *ngIf="controls['password'].errors?.['pattern']">Password must contain at least one numbers number.</small>
+                <small *ngIf="controls['password'].errors?.['pattern']">Password must contain at least one numbers number.</small>
+                <small *ngIf="controls['password'].errors?.['pattern']">Password must contain at least one special characters.</small>
+              </div>
             </div>
             <div class="mb-3">
                 <label class="form-label">Website</label>
                 <input type="text" class="form-control" formControlName="website">
+                <div class="alert alert-danger" *ngIf="controls['website'].invalid && controls['website'].touched" style="margin-top:10px">
+                  <small *ngIf="controls['website'].errors?.['required']">Website is required.</small>
+                </div>
             </div>
             <div class="row">
               <div class="col-md-6">
                 <div class="mb-3">
                   <label class="form-label">Phone</label>
                   <input type="number" class="form-control" formControlName="phone">
+                  <div class="alert alert-danger" *ngIf="controls['phone'].invalid && controls['phone'].touched" style="margin-top:10px">
+                    <small *ngIf="controls['phone'].errors?.['required']">Phone is required.</small>
+                  </div>
               </div>
               </div>
               <div class="col-md-6">
                   <div class="mb-3">
                       <label class="form-label">Role</label>
                       <input type="text" class="form-control" formControlName="role">
+                      <div class="alert alert-danger" *ngIf="controls['role'].invalid && controls['role'].touched" style="margin-top:10px">
+                        <small *ngIf="controls['role'].errors?.['required']">Role is required.</small>
+                      </div>
                   </div>
               </div>
           </div>
