@@ -21,6 +21,8 @@ const routes: Routes = [
     loadChildren:() => import('./pages/home/home.module').then((m) => m.HomeModule)
   },
    { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) },
+   { path: 'user', loadChildren: () => import('./user/user.module').then(m => m.UserModule) },
+   { path: 'seller', loadChildren: () => import('./seller/seller.module').then(m => m.SellerModule) },
 ];
 
 @NgModule({
